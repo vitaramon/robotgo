@@ -648,8 +648,9 @@ func Click(args ...interface{}) {
 		double = args[1].(bool)
 	}
 
+	var microsleepDelay int
 	if len(args) > 2 {
-		microsleepDelay := args[2].(int)
+		microsleepDelay = args[2].(int)
 	}
 
 	if !double {
