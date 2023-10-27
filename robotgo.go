@@ -654,7 +654,7 @@ func Click(args ...interface{}) {
 	}
 
 	if !double {
-		C.clickMouse(button, microsleepDelay)
+		C.clickMouse(button, C.int(microsleepDelay))
 	} else {
 		C.doubleClick(button)
 	}
