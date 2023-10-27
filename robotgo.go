@@ -648,10 +648,14 @@ func Click(args ...interface{}) {
 		double = args[1].(bool)
 	}
 
+	if len(args) > 2 {
+		microsleepDelay = args[2].(int)
+	}
+
 	if !double {
-		C.clickMouse(button)
+		C.clickMouse(button, microsleepDelay)
 	} else {
-		C.doubleClick(button)
+		C.doubleClick(button, microsleepDelay)
 	}
 
 	MilliSleep(MouseSleep)
