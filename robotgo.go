@@ -649,7 +649,7 @@ func Click(args ...interface{}) {
 	}
 
 	if len(args) > 2 {
-		microsleepDelay = args[2].(int)
+		microsleepDelay := args[2].(int)
 	}
 
 	if !double {
