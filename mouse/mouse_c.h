@@ -188,7 +188,7 @@ void toggleMouse(bool down, MMMouseButton button) {
 
 void clickMouse(MMMouseButton button, float microsleep){
 	toggleMouse(true, button);
-	float delay = microsleep ? microsleep : 5.0
+	float delay = microsleep ? microsleep : 5.0;
 	microsleep(delay);
 	toggleMouse(false, button);
 }
