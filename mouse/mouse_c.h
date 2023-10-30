@@ -214,8 +214,8 @@ void doubleClick(MMMouseButton button){
 	#else
 		/* Double click for everything else. */
 		clickMouse(button, 5);
-		microsleep(200, 5);
-		clickMouse(button);
+		microsleep(200);
+		clickMouse(button, 5);
 	#endif
 }
 
