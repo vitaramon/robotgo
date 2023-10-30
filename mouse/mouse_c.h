@@ -213,8 +213,8 @@ void doubleClick(MMMouseButton button){
 		CFRelease(event);
 	#else
 		/* Double click for everything else. */
-		clickMouse(button);
-		microsleep(200);
+		clickMouse(button, 5);
+		microsleep(200, 5);
 		clickMouse(button);
 	#endif
 }
