@@ -12,7 +12,6 @@
 #include "../base/pubs.h"
 #include "../base/rgb.h"
 #include "screengrab_c.h"
-#include "screen_c.h"
 #include <stdio.h>
 
 void padHex(MMRGBHex color, char* hex) {
@@ -76,6 +75,14 @@ char* get_XDisplay_name() {
 		return sd;
 	#else
 		return "GetXDisplayName is only supported on Linux";
+	#endif
+}
+
+void close_main_display() {
+	#if defined(USE_X11)
+		XCloseMainDisplay();
+	#else
+		// 
 	#endif
 }
 
